@@ -1,0 +1,21 @@
+#Needs: fonts/HanSans-Bold.otf
+# but any other otf cid font would do.
+
+Open($2);
+Print( "...Read HanSans-Bold.otf")
+Generate("HansSansBold.otf");
+Print( "...Generated otf (cid)")
+Generate("HansSansBold.cid");
+Print( "...Generated ps cid")
+Save("HansSansBold.sfd");
+Print( "...Saved cid sfd")
+Save("HansSansBold.sfdir");
+Print( "...Saved cid sfdir")
+Close();
+Open("HansSansBold.sfdir");
+Print( "...Opened cid sfdir")
+Close();
+Open("HansSansBold.sfd");
+Print( "...Opened cid sfd")
+Close();
+Quit()

@@ -1,0 +1,15 @@
+#Needs: fonts/NimbusLGCUni-Regular.sfd
+
+#tests whether we get unicode encodings right when there are multiple encodings
+# per glyph
+#tests whether we get references right in postscript fonts
+
+Open($1)
+Generate("Nimbus.otf")
+Generate("Nimbus.ttf")
+Generate("Nimbus.pfb")
+"helper118A.pe"($1,"Nimbus.otf")
+"helper118A.pe"($1,"Nimbus.ttf")
+"helper118B.pe"($1,"Nimbus.otf")
+"helper118B.pe"($1,"Nimbus.pfb")
+Quit()

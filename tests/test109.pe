@@ -1,0 +1,11 @@
+#Needs: fonts/OverlapBugs.sfd
+#Needs: fonts/feta20.pfb
+#Make sure remove overlap sort of works...
+
+Open($1)
+SelectAll();
+RemoveOverlap();
+
+Open($2);
+SelectAll();
+RemoveOverlap();

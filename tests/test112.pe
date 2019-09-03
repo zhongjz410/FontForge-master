@@ -1,0 +1,33 @@
+#Needs: fonts/QuadraticConversionBug.sfd, fonts/CourierNew.ttf
+#Make sure quadratic conversion works...
+
+Open($1);
+# the following use to crash (when in a script)
+SetFontOrder(2);
+Save("QuadraticConversionBug2.sfd")
+Close()
+# this used to give us IErrors
+Open("QuadraticConversionBug2.sfd")
+Close()
+
+# Ok. We can do the conversion without egregious errors. But are the glyphs similar?
+Open($1);
+Reencode("Original");
+SelectAll()
+Copy()
+SetFontOrder(2);
+CompareGlyphs(-1,1.5)
+Close()
+
+#Now can we go to cubic?
+Open($2);
+Generate("CourierNew.pfb")
+SetFontOrder(3);
+Save("CourierNew.sfd")
+Close()
+Open("CourierNew.pfb")
+Close()
+Open("CourierNew.sfd")
+Close()
+
+Quit()

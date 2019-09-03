@@ -1,0 +1,15 @@
+#Needs: fonts/FormalScript.sfd, fonts/dvng10a-crash.sfd
+# Tests that contextual chaining tables do not cause crashes.
+
+Open($1);
+Generate("FormalScript.otf","ttf",0x80);
+Close();
+Open("FormalScript.otf");
+Close();
+
+Open($2);
+Generate("Deva.otf","ttf",0x80);
+Close();
+Open("Deva.otf");
+Close();
+Quit()

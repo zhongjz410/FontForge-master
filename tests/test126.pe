@@ -1,0 +1,7 @@
+#Needs: fonts/DataURI.sfd
+
+Open($1);
+Generate("DataURI.svg");
+Generate("DataURI.pt3");
+Open("DataURI.svg");
+#Open("DataURI.pt3");	/* We can't read this type3 font */

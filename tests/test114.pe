@@ -1,0 +1,7 @@
+#Needs: fonts/CaslonMM.sfd
+
+Open($1);
+Generate("Caslon.mm.pfa")
+Close()
+Open("Caslon.mm.pfa")
+Quit()

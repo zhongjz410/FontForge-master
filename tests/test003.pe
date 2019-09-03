@@ -1,0 +1,11 @@
+#Needs: fonts/MunhwaGothic-Bold
+# but any other non-otf cid font would do.
+
+Open($1);
+Print( "...Read MunhwaGothic-Bold (ps cid)")
+Generate("MunhwaGothic-Bold.otf");
+Print( "...Generated otf (cid)")
+Generate("MunhwaGothic-Bold.cid");
+Print( "...Generated cid")
+Close();
+Quit()

@@ -1,0 +1,6 @@
+#Needs: fonts/SimplifyBugs.sfd
+#Make sure simplify works...
+
+Open($1)
+SelectAll();
+Simplify(28,1);

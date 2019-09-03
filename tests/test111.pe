@@ -1,0 +1,5 @@
+#Needs: fonts/cmbsy10.pfb
+#Make sure merge fonts works...
+
+New();
+MergeFonts($1)

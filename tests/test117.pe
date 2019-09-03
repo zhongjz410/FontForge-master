@@ -1,0 +1,7 @@
+#Needs: fonts/ecrm1000.pfa, fonts/ecrm1000.tfm
+
+Open($1)
+MergeKern($2)
+Generate("ecrm.ttf","",0x200)
+Open("ecrm.ttf")
+Quit()

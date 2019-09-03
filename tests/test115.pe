@@ -1,0 +1,6 @@
+#Needs: fonts/n019003l.pfb
+
+Open($1);
+SelectAll();
+ReplaceWithReference();
+Quit()
